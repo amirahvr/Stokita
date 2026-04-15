@@ -2396,27 +2396,48 @@ p {
   margin-bottom: 15px;
 }
 
+/* =========================================
+   LIST FITUR (DIBUAT 2 KOLOM)
+   ========================================= */
 .features-list ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Membagi list menjadi 2 kolom sama besar */
+  column-gap: 20px; /* Jarak antara kolom kiri dan kanan */
+  row-gap: 15px; /* Jarak antara baris atas dan bawah */
 }
 
 .features-list ul li {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  align-items: flex-start; /* Memastikan icon sejajar di atas jika teksnya panjang dan turun baris */
+  gap: 10px;
   color: #475569;
-  font-size: 15px;
-  margin-bottom: 12px;
+  font-size: 14px; /* Ukuran font sedikit disesuaikan agar muat 2 kolom */
+  margin-bottom: 0; /* Margin bawah dihapus karena sudah diatur oleh row-gap */
+  line-height: 1.4;
 }
 
 .features-list ul li i {
   color: #10b981; /* Warna Centang Hijau */
   font-size: 18px;
   font-weight: bold;
+  margin-top: 2px; /* Menyesuaikan posisi icon dengan teks */
 }
 
+/* Tulisan warna khusus (Tanpa Biaya Bulanan) */
+.features-list ul li.highlight {
+  color: #b45309; /* Warna Coklat/Orange */
+  font-weight: 600;
+}
+
+/* Responsif: Kembali jadi 1 kolom saat dibuka di HP agar teks tidak terlalu sempit */
+@media (max-width: 576px) {
+  .features-list ul {
+    grid-template-columns: 1fr; 
+  }
+}
 /* Tulisan warna khusus (Tanpa Biaya Bulanan) */
 .features-list ul li.highlight {
   color: #b45309; /* Warna Coklat/Orange */
