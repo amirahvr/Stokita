@@ -1,14 +1,622 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
-</head>
-<body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
-</body>
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Stokita</title>
+    <meta name="description" content="Sistem Manajemen Persediaan" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      
+      type="image/x-icon"
+      href="assets/img/logo/favicon.jpg"
+    />
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- ======== CSS here ======== -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/lineicons.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- ======== preloader start ======== -->
+    <div class="preloader">
+      <div class="loader">
+        <div class="spinner">
+          <div class="spinner-container">
+            <div class="spinner-rotator">
+              <div class="spinner-left">
+                <div class="spinner-circle"></div>
+              </div>
+              <div class="spinner-right">
+                <div class="spinner-circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- preloader end -->
+
+    <!-- ======== header start ======== -->
+    <header class="header">
+      <div class="navbar-area">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-12">
+              <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html">
+                  <img src="assets/img/logo/logo.svg" alt="Logo" />
+                </a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="toggler-icon"></span>
+                  <span class="toggler-icon"></span>
+                  <span class="toggler-icon"></span>
+                </button>
+
+                <div
+                  class="collapse navbar-collapse sub-menu-bar"
+                  id="navbarSupportedContent"
+                >
+                  <ul id="nav" class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                      <a class="page-scroll active" href="#home">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="page-scroll" href="#features">Fitur</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="page-scroll" href="#about-1">Tentang</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a  class="page-scroll" href="#why">Keunggulan</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="page-scroll" href="#testimonials">Testimoni</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="javascript:void(0)">Harga</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- navbar collapse -->
+              </nav>
+              <!-- navbar -->
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- navbar area -->
+    </header>
+    <!-- ======== header end ======== -->
+
+    <!-- ======== hero-section start ======== -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center position-relative">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <h1 class="wow fadeInUp" data-wow-delay=".4s">
+                Modern Inventory Management System
+              </h1>
+              <p class="wow fadeInUp" data-wow-delay=".6s">
+                Optimalkan pengelolaan persediaan Anda dengan Stockita <br>
+                —  Akurat, efisien, dan real-time.              
+              </p>
+              <a
+                href="#about-1"
+                class="main-btn border-btn btn-hover wow fadeInUp"
+                data-wow-delay=".6s"
+                >Pelajari Lebih Lanjut</a
+              >
+              <a href="#features" class="scroll-bottom">
+                <i class="lni lni-arrow-down"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-img wow fadeInUp" data-wow-delay=".5s">
+              <img src="assets/img/hero/hero-hero.png
+              " alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======== hero-section end ======== -->
+
+    <!-- ======== feature-section start ======== -->
+    <section id="features" class="feature-section pt-120">
+      <div class="container">
+        <div class="row justify-content-center">
+          
+          <div class="col-lg-4 col-md-8 col-sm-10">
+            <div class="single-feature">
+              <div class="icon">
+                <i class="lni lni-package"></i>
+              </div>
+              <div class="content">
+                <h3>Monitoring Stok Real-time</h3>
+                <p>
+                  Pantau jumlah stok barang secara akurat dan instan.
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-8 col-sm-10">
+            <div class="single-feature">
+              <div class="icon">
+                <i class="lni lni-alarm"></i>
+              </div>
+              <div class="content">
+                <h3>Notifikasi Stok Menipis</h3>
+                <p>
+                  Dapatkan peringatan otomatis saat stok mencapai batas minimum.
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-8 col-sm-10">
+            <div class="single-feature">
+              <div class="icon">
+                <i class="lni lni-stats-up"></i>
+              </div>
+              <div class="content">
+                <h3>Dashboard Analytics</h3>
+                <p>
+                  Visualisasikan data stok dan penjualan dengan mudah.
+                </p>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    <!-- ======== feature-section end ======== -->
+
+    <!-- ======== about-section start ======== -->
+    <section id="about-1" class="about-section pt-150">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-xl-6 col-lg-6">
+            <div class="about-img">
+              <img src="assets/img/about/about-1.png?v=3" alt="Dashboard Stokita" class="w-100" />
+              
+              <img
+                src="assets/img/about/about-left-shape.svg?v=3"
+                alt=""
+                class="shape shape-1"
+              />
+              
+              <img
+                src="assets/img/about/left-dots.svg?v=3"
+                alt=""
+                class="shape shape-2"
+              />
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6">
+            <div class="about-content">
+              <div class="section-title mb-30">
+                <h2 class="mb-25 wow fadeInUp" data-wow-delay=".2s">
+                  Modern Inventory Management System
+                </h2>
+                <p class="wow fadeInUp" data-wow-delay=".4s">
+                  Stokita adalah solusi berbasis data yang dirancang untuk membantu pelaku UMKM retail dalam mengelola persediaan barang secara lebih efektif. Melalui dashboard visual yang terintegrasi, Stokita menyajikan informasi stok secara real-time sehingga memudahkan pengguna dalam memantau ketersediaan barang, mengidentifikasi stok minimum, serta memahami pergerakan barang masuk dan keluar.
+                </p>
+                <p class="wow fadeInUp mt-3" data-wow-delay=".5s">
+                  Dengan pendekatan berbasis data, Stokita membantu pemilik usaha mengambil keputusan yang lebih cepat, tepat, dan terarah dalam pengelolaan stok, sehingga operasional bisnis menjadi lebih efisien dan terkontrol.
+                </p>
+              </div>
+              <a
+              href="#why"
+              class="main-btn border-btn btn-hover page-scroll wow fadeInUp"
+              data-wow-delay=".6s"
+            >Cek Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======== about-section end ======== -->
+
+    <!-- ======== feature-section start ======== -->
+    <section id="why" class="feature-extended-section pt-100">
+      <div class="feature-extended-wrapper">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            
+            <!-- kasih mx-auto biar center -->
+            <div class="col-lg-6 text-center mx-auto">
+              
+              <div class="section-title mb-50 text-center">
+                <h2 class="mb-25 wow fadeInUp" data-wow-delay=".2s">
+                  Keunggulan Utama Stokita
+                </h2>
+                <p class="wow fadeInUp" data-wow-delay=".4s">
+                  Sistem manajemen stok yang dirancang khusus untuk kemudahan operasional bisnis Anda.
+                </p>
+              </div>
+    
+              <!-- penting: justify-content-center -->
+              <div class="row justify-content-center">
+                
+                <div class="col-sm-6 d-flex justify-content-center">
+                  <div class="single-feature-extended text-center">
+                    <div class="icon"><i class="lni lni-display"></i></div>
+                    <div class="content">
+                      <h3>Dashboard Intuitif</h3>
+                      <p>Visualisasi data yang bersih dan mudah dipahami.</p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="col-sm-6 d-flex justify-content-center">
+                  <div class="single-feature-extended text-center">
+                    <div class="icon"><i class="lni lni-stats-up"></i></div>
+                    <div class="content">
+                      <h3>Tren Real-time</h3>
+                      <p>Pantau arus barang dengan grafik akurat.</p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="col-sm-6 d-flex justify-content-center">
+                  <div class="single-feature-extended text-center">
+                    <div class="icon"><i class="lni lni-alarm"></i></div>
+                    <div class="content">
+                      <h3>Sistem Reorder</h3>
+                      <p>Notifikasi saat stok menipis.</p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="col-sm-6 d-flex justify-content-center">
+                  <div class="single-feature-extended text-center">
+                    <div class="icon"><i class="lni lni-mobile"></i></div>
+                    <div class="content">
+                      <h3>Mobile Friendly</h3>
+                      <p>Akses dari smartphone kapan saja.</p>
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
+            </div>
+    
+            <!-- gambar tetap -->
+            <div class="col-lg-6 text-center">
+              <div class="feature-img wow fadeInRight" data-wow-delay=".5s">
+                <img src="assets/img/hero/filalala (4).png"
+                     alt="Stokita Dashboard Mobile"
+                     class="w-100"
+                     style="max-width: 400px; border-radius: 30px;">
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======== feature-section end ======== -->
+
+    <!-- ======== Testimoni ======== -->
+    <section id="testimonials" class="testimonial-section pt-100 pb-100">
+      <div class="container">
+        <div class="testimonial-wrapper">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+              <span class="testi-badge wow fadeInUp" data-wow-delay=".2s">Testimonials</span>
+              <h2 class="testi-title mt-3 mb-3 wow fadeInUp" data-wow-delay=".4s">Hasil Nyata<br>Pengguna sendirinya</h2>
+              <p class="testi-subtitle mb-5 wow fadeInUp" data-wow-delay=".6s">
+                Dari mengurangi selisih perhitungan hingga perencanaan stok yang lebih jelas dan operasional yang lancar, Stokita membantu tim bekerja dengan lebih efisien.
+              </p>
+
+              <div class="testi-stats d-flex justify-content-center align-items-center mb-5 wow fadeInUp" data-wow-delay=".8s">
+                
+                <div class="stat-item">
+                  <h3 class="stat-number"><span class="counter" data-target="90">0</span><span>%</span></h1>
+                  <p class="stat-text">akurasi pencatatan stok</p>
+                </div>
+                
+                <div class="stat-divider"></div>
+                
+                <div class="stat-item">
+                  <h3 class="stat-number"><span class="counter" data-target="3">0</span><span>x</span></h1>
+                  <p class="stat-text">proses pengecekan stok</p>
+                </div>
+                
+                <div class="stat-divider"></div>
+                
+                <div class="stat-item">
+                  <h3 class="stat-number"><span class="counter" data-target="70">0</span><span>%</span></h1>
+                  <p class="stat-text">mengurangi risiko kehabisan stok</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            
+            <div class="col-lg-4 col-md-6 mb-4 d-flex">
+              <div class="testi-card h-100 d-flex flex-column">
+                <p class="card-quote flex-grow-1">
+                  "Apa yang dulunya memakan waktu berjam-jam untuk penyortiran manual, memprioritaskan, dan mereview stok kini terjadi secara instan. Fitur rekap otomatisnya saja sangat menghemat waktu kami, dan sistem notifikasinya menjaga semua orang tetap fokus pada pekerjaan yang benar-benar penting."
+                </p>
+                <div class="card-user d-flex align-items-center mt-4">
+                  <img src="https://ui-avatars.com/api/?name=Rahadatul&background=FF6B6B&color=fff&rounded=true" alt="Rahadatul">
+                  <div>
+                    <h6 class="mb-0">Rahadatul</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 d-flex flex-column gap-4">
+              <div class="testi-card">
+                <p class="card-quote">
+                  "Stokita sangat membantu saya dalam memantau stok barang tanpa harus cek manual satu per satu. Notifikasi stok menipisnya juga sangat berguna, jadi saya tidak pernah telat restock lagi."
+                </p>
+                <div class="card-user d-flex align-items-center mt-4">
+                  <img src="https://ui-avatars.com/api/?name=Awel&background=4ECDC4&color=fff&rounded=true" alt="Awel">
+                  <div>
+                    <h6 class="mb-0">Awel</h6>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testi-card">
+                <p class="card-quote">
+                  "Dulu saya sering bingung menentukan barang mana yang harus dibeli ulang. Setelah pakai Stokita, semua data sudah jelas di dashboard, jadi keputusan bisa diambil lebih cepat dan tepat."
+                </p>
+                <div class="card-user d-flex align-items-center mt-4">
+                  <img src="https://ui-avatars.com/api/?name=Jeno&background=FDCB6E&color=fff&rounded=true" alt="Jeno">
+                  <div>
+                    <h6 class="mb-0">Jeno</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 mb-4 d-flex flex-column gap-4">
+              <div class="testi-card">
+                <p class="card-quote">
+                  "Sistemnya simpel dan mudah digunakan, bahkan untuk saya yang tidak terlalu paham teknologi. Semua data stok langsung terupdate dan lebih rapi dibanding sebelumnya."
+                </p>
+                <div class="card-user d-flex align-items-center mt-4">
+                  <img src="https://ui-avatars.com/api/?name=Faizal&background=9B59B6&color=fff&rounded=true" alt="Faizal">
+                  <div>
+                    <h6 class="mb-0">Faizal</h6>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testi-card">
+                <p class="card-quote">
+                  "Stokita menyederhanakan seluruh alur kerja kami. Dari pencatatan barang masuk hingga laporan penjualan harian, semuanya terasa lebih cepat dan intuitif. Bakal rekomendasiin ke orang"
+                </p>
+                <div class="card-user d-flex align-items-center mt-4">
+                  <img src="https://ui-avatars.com/api/?name=Jungkook&background=3498DB&color=fff&rounded=true" alt="Jungkook">
+                  <div>
+                    <h6 class="mb-0">Jungkook</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <section id="pricing" class="pricing-section pt-100 pb-100">
+      <div class="container">
+        <div class="pricing-wrapper">
+          <div class="row align-items-center">
+            
+            <div class="col-lg-6 col-md-12 mb-5 mb-lg-0">
+              <span class="pricing-badge wow fadeInUp" data-wow-delay=".2s">Features</span>
+              <h2 class="pricing-title mt-3 mb-4 wow fadeInUp" data-wow-delay=".4s">Work smarter,<br>scale faster</h2>
+              <p class="pricing-subtitle wow fadeInUp" data-wow-delay=".6s">
+                Kelola stok barang dengan lebih rapi, cepat, dan tanpa ribet. Stokita bantu kamu pantau keluar-masuk barang secara real-time.
+              </p>
+            </div>
+
+            <div class="col-lg-5 offset-lg-1 col-md-12">
+              <div class="pricing-card wow fadeInUp" data-wow-delay=".8s">
+                <h4 class="card-title">Paket Lifetime Stokita</h4>
+                <p class="card-desc">Bayar sekali, pakai selamanya</p>
+
+                <div class="price-box my-4">
+                  <span class="currency">Rp</span>
+                  <h3 class="price">200.000</h3>
+                </div>
+                <p class="price-duration">/ sekali bayar</p>
+
+                <p class="card-text mb-4">Solusi manajemen stok simpel untuk usaha kecil & menengah.</p>
+
+                <a href="#contact" class="main-btn w-100 pricing-btn mb-4">Mulai Sekarang</a>
+
+                <div class="features-list">
+                  <p class="features-title">Fitur yang kamu dapat:</p>
+                  <ul>
+                    <li><i class="lni lni-checkmark"></i> Manajemen stok otomatis</li>
+                    <li><i class="lni lni-checkmark"></i> Notifikasi stok habis</li>
+                    <li><i class="lni lni-checkmark"></i> Riwayat transaksi</li>
+                    <li><i class="lni lni-checkmark"></i> Dashboard sederhana</li>
+                    <li><i class="lni lni-checkmark"></i> Akses selamanya (lifetime)</li>
+                    <li class="highlight">🔥 Tanpa biaya bulanan</li>
+                    <li><i class="lni lni-checkmark"></i> Cocok untuk UMKM & mahasiswa</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="subscribe-section pt-120 pb-120">
+      <div class="container">
+        <div class="subscribe-wrapper">
+          <div class="row align-items-center">
+            
+            <div class="col-xl-6 col-lg-6">
+              <div class="section-title mb-15">
+                <h2 class="text-white mb-25">Mulai Kelola Stok Bisnis Kamu Sekarang 🚀</h2>
+                <p class="text-white">
+                  Gunakan Stokita untuk memantau stok secara real-time. Punya pertanyaan khusus? Isi form di samping dan hubungi kami langsung via WhatsApp.
+                </p>
+              </div>
+            </div>
+    
+            <div class="col-xl-6 col-lg-6">
+              <div class="contact-form">
+                <form id="contact-form-action" onsubmit="sendContactToWa(event)">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <fieldset>
+                        <input name="name" type="text" id="contactName" placeholder="Nama Lengkap" required="">
+                      </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                      <fieldset>
+                        <input name="email" type="email" id="contactEmail" placeholder="Alamat Email" required="">
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <textarea name="message" rows="4" id="contactMessage" placeholder="Pesan Anda..." required=""></textarea>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="main-btn">Kirim via WhatsApp</button>
+                      </fieldset>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+      function sendContactToWa(event) {
+        // 1. Mencegah refresh halaman & error 501
+        event.preventDefault(); 
+        
+        // 2. Ambil data dari input form
+        const name = document.getElementById('contactName').value;
+        const email = document.getElementById('contactEmail').value;
+        const message = document.getElementById('contactMessage').value;
+        
+        // 3. Masukkan nomor WhatsApp kamu (format internasional tanpa '+')
+        const phoneNumber = "6289502775466"; 
+    
+        // 4. Susun template pesan agar terlihat profesional
+        const text = `Halo Stokita!\n\nAda pesan baru dari Form Kontak:\n\n*Nama:* ${name}\n*Email:* ${email}\n*Pesan:* ${message}`;
+        
+        // 5. Encode pesan agar aman dikirim via URL
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+        
+        // 6. Buka tab baru menuju WhatsApp
+        window.open(url, '_blank');
+      }
+    </script>
+
+    <!-- ======== footer start ======== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="widget-wrapper">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-6">
+              <div class="footer-widget">
+                <div class="logo mb-30">
+                  <a href="index.html">
+                    <img src="assets/img/logo/logo.svg" alt="" width="300" />
+                  </a>
+                </div>
+                <p class="desc mb-30 text-white">
+                  Modern Inventory Management System
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ======== footer end ======== -->
+
+    <!-- ======== scroll-top ======== -->
+    <a href="#" class="scroll-top btn-hover">
+      <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ======== JS here ======== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const counters = document.querySelectorAll('.counter');
+        const speed = 150; // Semakin kecil angkanya, semakin cepat berhitungnya
+
+        const startCounting = (counter) => {
+          const animate = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const increment = target / speed;
+
+            if (count < target) {
+              counter.innerText = Math.ceil(count + increment);
+              setTimeout(animate, 20); // Update setiap 20 milidetik
+            } else {
+              counter.innerText = target;
+            }
+          };
+          animate();
+        };
+
+        // Menggunakan Intersection Observer agar animasi baru mulai SAAT elemen terlihat di layar (di-scroll)
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              startCounting(entry.target);
+              observer.unobserve(entry.target); // Biar animasinya cuma jalan 1x saja
+            }
+          });
+        }, { threshold: 0.5 }); // Animasi jalan saat 50% elemen sudah masuk ke dalam layar
+
+        counters.forEach(counter => {
+          observer.observe(counter);
+        });
+      });
+    </script>
+  </body>
 </html>
